@@ -1,5 +1,5 @@
 # **Finding Lane Lines on the Road** 
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+[![Udacity - Self-Driving Car NanoDegree]
 
 <img src="img1.png" width="480" alt="Combined Image" />
 <img src="img2.png" width="480" alt="Combined Image" />
@@ -18,21 +18,29 @@ To complete the project, two files will be submitted: a file containing project 
 To meet specifications in the project, take a look at the requirements in the [project rubric](https://review.udacity.com/#!/rubrics/322/view)
 
 
-Creating a Great Writeup
----
-For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
+### Reflection
 
-1. Describe the pipeline
+### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-2. Identify any shortcomings
+My pipeline consisted of 5 steps. First, I converted the images to grayscale using cv2.cvtColor(image,cv2.COLOR_RGB2GRAY) command. Then I added a gaussian blur to the grayscale image. Following that I initialized a Canny edge detector with threshold[90,150].The canny detector returned edges on which I initalized a mask with zeros. After that I called the region_of_interest function with a polygon with 4 edges and got the mask edges as output which was then passed on to the hough_lines function.
 
-3. Suggest possible improvements
+I modified draw_lines() function by seperating the lines on the basis of slope. Then I took an average of the lines with positive slope and similarly with negative slope and the passed the result to the cv2.line() function.
 
-We encourage using images in your writeup to demonstrate how your pipeline works.  
 
-All that said, please be concise!  We're not looking for you to write a book here: just a brief description.
 
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup. Here is a link to a [writeup template file](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). 
+
+### 2. Identify potential shortcomings with your current pipeline
+
+
+One potential shortcoming would be that it does not work properly on roads with curvature. It only works with staright markings on the road.
+
+
+
+
+### 3. Suggest possible improvements to your pipeline
+
+A possible improvement would be to calibrate the camera and then undistort the image and then do the same process as above. 
+ 
 
 
 The Project
@@ -52,8 +60,18 @@ Jupyter is an Ipython notebook where you can run blocks of code and see results 
 
 A browser window will appear showing the contents of the current directory.  Click on the file called "P1.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to complete the project.  
 
-**Step 3:** Complete the project and submit both the Ipython notebook and the project writeup
+## Authors
 
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
+* **Gautam Sharma** - *Initial work* - [PurpleBooth](https://github.com/gautam-sharma1)
+
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Udacity and the whole Self driving Car Nanodegree Team
+
 
