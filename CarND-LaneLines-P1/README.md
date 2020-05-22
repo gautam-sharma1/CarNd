@@ -1,5 +1,5 @@
 # **Finding Lane Lines on the Road** 
-[![Udacity - Self-Driving Car NanoDegree]
+
 
 <img src="img1.png" width="480" alt="Combined Image" />
 <img src="img2.png" width="480" alt="Combined Image" />
