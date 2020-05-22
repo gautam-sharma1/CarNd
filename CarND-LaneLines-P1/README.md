@@ -62,7 +62,7 @@ A browser window will appear showing the contents of the current directory.  Cli
 
 ## Authors
 
-* **Gautam Sharma** - *Initial work* - [PurpleBooth](https://github.com/gautam-sharma1)
+* **Gautam Sharma** - *Initial work* - [github](https://github.com/gautam-sharma1)
 
 
 
