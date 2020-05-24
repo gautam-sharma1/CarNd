@@ -52,7 +52,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showinng the number of input images corresponding to their labels.
 
-![alt text][image1]
+![alt text](bar.png)
 
 ### Design and Test a Model Architecture
 
@@ -60,15 +60,15 @@ Here is an exploratory visualization of the data set. It is a bar chart showinng
 
 As a first step, I decided to convert the images to grayscale because it helps flatten the input width and also preserves key features.
 
-Here is an example of a traffic sign image before and after grayscaling.
+Here is an example of a traffic sign image before grayscaling.
 
-![alt text][image2]
+![alt text](original.png)
 
 As a last step, I normalized the image data because it helps in making the bias and variance close to zero.
 
 Here is an example of an original image and an augmented image:
 
-![alt text][image3]
+![alt text](before.png)
 
 
 
@@ -128,8 +128,8 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text](p1.png)![alt text](p2.png)![alt text](p3.png)
+![alt text](p4.png) ![alt text](p5.png)
 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
